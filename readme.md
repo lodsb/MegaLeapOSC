@@ -54,15 +54,21 @@ new Configuration {
 # Multiple Messages and further processing #
 Since the config makes uses of sequences of messages you can send multiple messages per event.
 Example:
-    case x: LHand => Seq(Message("/hand"+x.id, x.pos.getX), Messages("/hand"+x.id, x.pos.getY))
-    case x: LHand => Seq(Message("/hand", scala.math.acos(x.pos.getX/x.pos.getZ)), Messages("/handOther", x.scale*x.sphRadius ))
+>    case x: LHand => Seq(Message("/hand"+x.id, x.pos.getX), Messages("/hand"+x.id, x.pos.getY))
+>
+>    case x: LHand => Seq(Message("/hand", scala.math.acos(x.pos.getX/x.pos.getZ)), Messages("/handOther", x.scale*x.sphRadius ))
+>
 
 Of course, since you can actually use any scala code, you can reformat and further process the events as you wish;
 Other code has to be simply contained in your scala-config file.
 >    ...
+>
 >    case x: LHand => Seq(Message("/finger", runningMean(x.length)))
+>
 >    ...
+>
 >    def runningMean() {...}
+>
 >    ....
 
 # Data / Attributes #
