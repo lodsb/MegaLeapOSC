@@ -1,14 +1,13 @@
 #intro#
 This is yet another OSC control-app for the Leap Motion sensor, it uses scala, so it is crossplatform.
 It allows to use different configurations for your various sessions (ip/port & messages).
-You can send multiple osc messages per event or to arbitrarily
-modify the event data by altering the configuration. This is done via using Twitter's Eval library that allows to use native scala files to store
+You can send multiple osc messages per event or arbitrarily
+modify the event data by altering the configuration file. This is done via using Twitter's Eval library that allows to use native scala files to store
 configurations - so if you want to dig deeper, you can just add some custom scala code to your config.
-The UI contains info such as the messages that are being sent.
-The app is multi-threaded for ui/network updates, so it should be responsive.
 
-If you make use of the IDs: they have
-been made consistent so 2 hands or fingers will always get the IDs 0 & 1 etc.
+* The UI contains info such as the messages that are being sent.
+* The app is multi-threaded for ui/network updates, so it should be responsive.
+* If you make use of the IDs: they have been made consistent so 2 hands or fingers will always get the IDs 0 & 1 etc.
 
 !evening hack code quality!
 
