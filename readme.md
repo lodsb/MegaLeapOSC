@@ -40,7 +40,7 @@ new Configuration {
   def map(leapObject: LeapObjectWrappers.WrappedLeapObject) : Seq[Message] = {
 
     leapObject match {
-      case x: LHand => Seq(Message("/hand"+x.id, x.pos.getX))
+      case x: LHand => Seq(Message("/hand"+x.id, x.pos.getX, x.pos.getY, x.pos.getZ, x.pos.roll))
       case x: LFinger => Seq(Message("/finger"+x.id, x.pos.getX))
       case x: LTool => Seq(Message("/tool"+x.id, x.pos.getX))
       case x: LGestureCircle => Seq(Message("/circle", x.progess, x.radius))
